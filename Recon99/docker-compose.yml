@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  recon99:
+    build: .
+    image: recon99:latest
+    container_name: recon99
+    volumes:
+      - ./reports:/app/reports
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+    # Override command at runtime:
+    # docker-compose run recon99 -t example.com --html
+    command: ["--help"]
+
+# Usage:
+#   docker-compose build
+#   docker-compose run recon99 -t example.com --html --depth 2
+#   docker-compose run -e ANTHROPIC_API_KEY=sk-ant-xxx recon99 -t example.com --html --ai-summary

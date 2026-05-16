@@ -1,0 +1,33 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+.env
+.venv/
+venv/
+env/
+
+# Reports (keep sample only)
+reports/
+!reports/.gitkeep
+!reports/sample_report.json
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Secrets
+*.key
+*.pem
+secrets.json
+config.local.*
